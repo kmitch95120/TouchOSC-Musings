@@ -2,7 +2,7 @@
 
 This template was inspired by this [Tim Corpus tutorial](https://www.youtube.com/watch?v=3cGqrWCayDc) on how to use [TouchOSC mk2](https://hexler.net/touchosc) and [TouchOSC Bridge](https://hexler.net/touchosc#resources) to send keystrokes to a Mac or Windows PC.
 
-![image](image_v01.png)
+![image](image_v02.png)
 
 To configure the template for Mac or Windows, you only need to edit one variable in the document root init() script function.
 
