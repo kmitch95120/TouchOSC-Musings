@@ -8,13 +8,13 @@ An example of how to use a single button to control thre values of three other b
 
 ![image](images/1-to-3_buttons.png)
 
-## 1n-2out
+## 1in-2out
 
 An example of how to receive a MIDI message and use it to trigger the sending of 2 other MIDI messages. A box control is used for the messages since no interacion is required. No scripting needed.
 
 ![image](images/1in-2out.png)
 
-## 2mid-with-delay
+## 2midi-with-delay
 
 An example of how to send a MIDI message when a button is pressed and then a second MIDI message after a specified period of time. It's common to need a delay between MIDI messages, particularly with older hardware.
 
@@ -37,9 +37,15 @@ An example of how to change the MIDI CC# for a control using the 'TAG' property.
 
 ## always_bright_button
 
-An example of how to user two buttons to create a button aht is always bright. The bright color is actually the back button while the front, tranparent button is the value control. All of the scripting work is done with from the front button.
+An example of how to use two buttons to create a button that is always bright. The bright color is actually the back button while the front, tranparent button is the value control. All of the scripting work is done with from the front button.
 
 ![image](images/always_bright_button.png)
+
+## blinking_button
+
+An example of how to use two buttons to create a button that blinks when pressed.  The blinking is actually the back button while the front, tranparent button is the value control. The front button uses the notify function to tell the back button when to start or stop blinking.
+
+![image](images/blinking_button.gif)
 
 ## midi-after-delay
 
