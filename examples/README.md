@@ -47,6 +47,14 @@ An example of how to use two buttons to create a button that blinks when pressed
 
 ![image](images/blinking_button.gif)
 
+## CC_buttons_to_knob
+
+An example of how to change the CC value of a MIDI message sent by a radial (knob). An exclusive button group is used to set the CC value in the radial 'tag' property.  The 'tag' property is used in the radial MIDI message.
+
+V02: The radial values are now saved and restored when switching buttons (CC values). Note that the values are only saved while the template is running but not between sessions.
+
+![image](images/CC_buttons_to_knob.png)
+
 ## midi-after-delay
 
 An example of how to send a delayed MIDI message. The message is sent after a delay when the button is released.
