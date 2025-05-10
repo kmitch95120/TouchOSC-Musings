@@ -4,7 +4,7 @@ A collection of example templates, each showing a single, specific concept.
 
 ## 1-to-3_buttons
 
-An example of how to use a single button to control thre values of three other buttons at the same time.  Buttons 2-4 can be used individually while Button 1 sets them to the same state when pressed or released.
+An example of how to use a single button to control the values of three other buttons at the same time.  Buttons 2-4 can be used individually while Button 1 sets them to the same state when pressed or released.
 
 ![image](images/1-to-3_buttons.png)
 
@@ -54,6 +54,12 @@ An example of how to change the CC value of a MIDI message sent by a radial (kno
 V02: The radial values are now saved and restored when switching buttons (CC values). Note that the values are only saved while the template is running but not between sessions.
 
 ![image](images/CC_buttons_to_knob.png)
+
+## exclusive_button_group
+
+An example of how to create a button group where only one button is selected at a time. The advantage of this over a button grid control with exclusive mode enabled is the fact that each button can have its own unique messages, instead of just an 'x' value within the grid control. Another advantage of this method is the buttons don't need to be in any kind of a uniform pattern. They can be in a square pattern, or a circle, or a triangle, or whatever you wish.
+
+![image](images/exclusive_button_group.png)
 
 ## midi-after-delay
 
