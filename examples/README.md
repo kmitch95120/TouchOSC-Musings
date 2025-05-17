@@ -66,3 +66,19 @@ An example of how to create a button group where only one button is selected at 
 An example of how to send a delayed MIDI message. The message is sent after a delay when the button is released.
 
 ![image](images/midi-after-delay.png)
+
+## pager_midi_switch
+
+Use a MIDI message to switch pages of a pager. No scripting.
+
+A MIDI CH01 CC#1 message is defined at the pager level with the data2 value set to the page number of the pager. Pages in a pager are ZERO based meaning that that start to count from 0, not 1.
+
+![image](images/pager_midi_switch.png)
+
+## xy_touch
+
+Send a MIDI message when an XY control is touched and a different messaage (or value) when it is released. No scripting.
+
+In this example, a CH01 CC#1 with a data2 value of 127 is sent when the XY pad is touched, and a data2 value of 0 is sent when it is released. Each message, not just the value, could be different.
+
+![image](images/xy_touch.png)
