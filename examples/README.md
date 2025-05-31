@@ -75,6 +75,18 @@ A MIDI CH01 CC#1 message is defined at the pager level with the data2 value set 
 
 ![image](images/pager_midi_switch.png)
 
+## tunable_encoder
+
+This example is the result of someone needing an encoder to control the pan, tilt, zoom, focus, etc, of lighting fixtures using an ETC Cobalt lighting console. OSC messages are sent to increment or decrement values on the console.  At first, this seemed simple. All I had to do was send a 1 or -1 every time 'x' changed value. What I discovered was just how crazy sensitive the encoder 'x' value is when using onValueChanged. This is because 'x' is a float value between 0 - 1 and is out to 15 decimal places, so even a minute change caused an increment or decrement.  
+
+I decided to divide the encoder into segments, much like an analog rotary encoder. 100 segments per rotation seemed like a good starting point but, of course, this needed to be 'tunable'. I further decided that the encoder needed a 'coarse' mode of 10/-10 per segment and a 'fine' mode of 1/-1 per segment. The mode is selected with a button in the center of the encoder. Of course, the increment and decrement values are 'tunable' as well.
+
+To make things easier to 'tune' I put all of the parameters, including the OSC address, at the top of the encoder script. Finally, I grouped the controls together, so it is modular and can be duplicated as many times as needed.
+
+**IMPORTANT:** When duplicating, make sure you uncheck 'Settings->Editor, Assign new names on copy/paste' so the controls within the group are not renamed. It is safe to rename the group as well as change the text value of the labels within the group.
+
+![image](images/tunable_encoder.png)
+
 ## xy_touch
 
 Send a MIDI message when an XY control is touched and a different messaage (or value) when it is released. No scripting.
