@@ -1,0 +1,821 @@
+[
+    {
+        "id": "94e42c7611c4a86d",
+        "type": "tab",
+        "label": "IR Remote - OSC Handler",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ab20d5c6e10b6da2",
+        "type": "switch",
+        "z": "94e42c7611c4a86d",
+        "name": "TiVo",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "regex",
+                "v": "nav_left$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "nav_right$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "nav_up$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "nav_down$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "nav_ok$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "pwr$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "back$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "tivo$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "guide$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "vol_up$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "vol_down$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "chn_up$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "chn_down$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "play$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "pause$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "record$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "rew$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "ffwd$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "skipfwd$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "skipback$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "act_tivo$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "act_off$",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 23,
+        "x": 790,
+        "y": 460,
+        "wires": [
+            [
+                "4e363401be83baf9"
+            ],
+            [
+                "b829a03e5883a0f4"
+            ],
+            [
+                "e9ee404b4664d2c8"
+            ],
+            [
+                "04c16dce4115d614"
+            ],
+            [
+                "96bb4c127d87106b"
+            ],
+            [
+                "8f7606d7837a9fb5"
+            ],
+            [
+                "7ba101bef3853cbc"
+            ],
+            [
+                "53b15b637aa4b2e4"
+            ],
+            [
+                "500f62bee53a8caf"
+            ],
+            [
+                "0fd9f93a0d9c8fdd"
+            ],
+            [
+                "45d34a12e21898ac"
+            ],
+            [
+                "967e3f72b331cab0"
+            ],
+            [
+                "8fe8e7673d98a407"
+            ],
+            [
+                "d26a503266fb3338"
+            ],
+            [
+                "e56d073104f75dec"
+            ],
+            [
+                "765e19abb50202a3"
+            ],
+            [
+                "c00152c33e916908"
+            ],
+            [
+                "849419e3a98c8eb3"
+            ],
+            [
+                "7015a9e9ab0395e5"
+            ],
+            [
+                "b19b3398fe9962f9"
+            ],
+            [
+                "2b23b07f0957bfd1"
+            ],
+            [
+                "8aad986241de5839"
+            ],
+            [
+                "0bfd10c7355b6df9"
+            ]
+        ]
+    },
+    {
+        "id": "0bfd10c7355b6df9",
+        "type": "debug",
+        "z": "94e42c7611c4a86d",
+        "name": "TiVo Ignored",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1210,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "4e363401be83baf9",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Left",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22DirectionLeft%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1190,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b829a03e5883a0f4",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Right",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22DirectionRight%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1190,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e9ee404b4664d2c8",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Up",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22DirectionUp%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1190,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "04c16dce4115d614",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Down",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22DirectionDown%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1190,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "96bb4c127d87106b",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "OK",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22Select%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1190,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f7606d7837a9fb5",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "PWR",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22PowerToggle%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1190,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7ba101bef3853cbc",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Exit",
+        "server": "be591102caef2984",
+        "activity": null,
+        "label": "",
+        "command": "%7B%22command%22::%22Back%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1190,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "53b15b637aa4b2e4",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Menu",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22TiVo%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1190,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "500f62bee53a8caf",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Guide",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22Guide%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1190,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0fd9f93a0d9c8fdd",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Vol Up",
+        "server": "be591102caef2984",
+        "activity": null,
+        "label": "",
+        "command": "%7B%22command%22::%22VolumeUp%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1190,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "45d34a12e21898ac",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Vol Down",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22VolumeDown%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1200,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "967e3f72b331cab0",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Chn Up",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22ChannelUp%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1200,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8fe8e7673d98a407",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Chn Down",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22ChannelDown%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1210,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d26a503266fb3338",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Play",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22Play%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1190,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e56d073104f75dec",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Pause",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22Pause%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1190,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "765e19abb50202a3",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Record",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22Record%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1200,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c00152c33e916908",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "Rewind",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22Rewind%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1200,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "849419e3a98c8eb3",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "FastForward",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22FastForward%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1210,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7015a9e9ab0395e5",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "SkipForward",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22SkipForward%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1210,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b19b3398fe9962f9",
+        "type": "H command",
+        "z": "94e42c7611c4a86d",
+        "name": "SkipBackward",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22SkipBack%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 1220,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b23b07f0957bfd1",
+        "type": "H activity",
+        "z": "94e42c7611c4a86d",
+        "name": "Activity TiVo",
+        "server": "be591102caef2984",
+        "activity": "41486591",
+        "label": "Watch TiVo",
+        "x": 1210,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8aad986241de5839",
+        "type": "H activity",
+        "z": "94e42c7611c4a86d",
+        "name": "Activity Off",
+        "server": "be591102caef2984",
+        "activity": "-1",
+        "label": "PowerOff",
+        "x": 1210,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93347e61268767b6",
+        "type": "udp in",
+        "z": "94e42c7611c4a86d",
+        "name": "From TouchOSC",
+        "iface": "",
+        "port": "8000",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "buffer",
+        "x": 180,
+        "y": 460,
+        "wires": [
+            [
+                "e4d60c5589ce55cf"
+            ]
+        ]
+    },
+    {
+        "id": "e4d60c5589ce55cf",
+        "type": "osc",
+        "z": "94e42c7611c4a86d",
+        "name": "OSC Decode",
+        "path": "",
+        "metadata": false,
+        "x": 370,
+        "y": 460,
+        "wires": [
+            [
+                "a50a6be3c0256427",
+                "a2de90f2d406a803"
+            ]
+        ]
+    },
+    {
+        "id": "69cb3f0b011e4593",
+        "type": "comment",
+        "z": "94e42c7611c4a86d",
+        "name": "Receive Messages from TouchOSC",
+        "info": "",
+        "x": 240,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "a50a6be3c0256427",
+        "type": "debug",
+        "z": "94e42c7611c4a86d",
+        "name": "DEBUG: from TouchOSC",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a2de90f2d406a803",
+        "type": "switch",
+        "z": "94e42c7611c4a86d",
+        "name": "Filter",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "regex",
+                "v": "^/hs4b/backoffice/tivo/",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 460,
+        "wires": [
+            [
+                "ab20d5c6e10b6da2"
+            ],
+            [
+                "7bb8bc22a7766771"
+            ]
+        ]
+    },
+    {
+        "id": "7bb8bc22a7766771",
+        "type": "debug",
+        "z": "94e42c7611c4a86d",
+        "name": "DEBUG: Ignored",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "21de67a98f8b30d1",
+        "type": "comment",
+        "z": "94e42c7611c4a86d",
+        "name": "Log Everything",
+        "info": "",
+        "x": 540,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "d95650ae9f760144",
+        "type": "comment",
+        "z": "94e42c7611c4a86d",
+        "name": "Log Ignored Messages",
+        "info": "",
+        "x": 740,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "579d5ede45501f0c",
+        "type": "comment",
+        "z": "94e42c7611c4a86d",
+        "name": "Log Ignored Commands",
+        "info": "",
+        "x": 1210,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "be591102caef2984",
+        "type": "harmony-server",
+        "name": "Back Office",
+        "ip": "172.29.1.69"
+    }
+]
