@@ -2,7 +2,7 @@
 
 This is a proof-of-concept UI for a [Logitech Harmony Hub](https://support.myharmony.com/en-us/hub). Even though Logitech has officially discontinued the sale of this product, it remains one of the most popular universal remote control solutions, particularly well suited for integration with home automation systems. For security reasons, the XMPP remote feature on the hub is disabled by default and therefore must be enabled for remote control to work. This is be done from the Harmony app. Go to: **Menu > Harmony Setup > Add/Edit Devices & Activities > Remote & Hub > Enable XMPP**.
 
-The TouchOSC template sends custom [OSC, Open Sound Control](https://ccrma.stanford.edu/groups/osc/index.html) messages to a message handler running in Node-RED on a [Raspberry Pi 3B](https://www.raspberrypi.org/computers). The handler then sends command requests to the hub. The command requests are sent using the [Harmony Command node](https://flows.nodered.org/node/node-red-contrib-harmony-extra).
+The TouchOSC template sends custom [OSC, Open Sound Control](https://ccrma.stanford.edu/groups/osc/index.html) messages to a message handler running in [Node-RED](https://nodered.org/) on a [Raspberry Pi 3B](https://www.raspberrypi.org/computers). The handler then sends command requests to the hub. The command requests are sent using the [Harmony Command node](https://flows.nodered.org/node/node-red-contrib-harmony-extra).
 
 ## The TouchOSC Template ([ir_remote.tosc](ir_remote.tosc))
 
