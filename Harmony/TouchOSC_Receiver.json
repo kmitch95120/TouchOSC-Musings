@@ -1,0 +1,190 @@
+[
+    {
+        "id": "93347e61268767b6",
+        "type": "udp in",
+        "z": "94e42c7611c4a86d",
+        "name": "From TouchOSC",
+        "iface": "",
+        "port": "8000",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "buffer",
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "e4d60c5589ce55cf"
+            ]
+        ]
+    },
+    {
+        "id": "e4d60c5589ce55cf",
+        "type": "osc",
+        "z": "94e42c7611c4a86d",
+        "name": "OSC Decode",
+        "path": "",
+        "metadata": false,
+        "x": 330,
+        "y": 220,
+        "wires": [
+            [
+                "a50a6be3c0256427",
+                "a2de90f2d406a803"
+            ]
+        ]
+    },
+    {
+        "id": "69cb3f0b011e4593",
+        "type": "comment",
+        "z": "94e42c7611c4a86d",
+        "name": "Receive Messages from TouchOSC",
+        "info": "",
+        "x": 200,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a50a6be3c0256427",
+        "type": "debug",
+        "z": "94e42c7611c4a86d",
+        "name": "DEBUG: from TouchOSC",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "a2de90f2d406a803",
+        "type": "switch",
+        "z": "94e42c7611c4a86d",
+        "name": "Route",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "regex",
+                "v": "^/hs4b/backoffice/tivo/",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "^/hs4b/backoffice/lighting/",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "regex",
+                "v": "^/hs4b/backoffice/hdmi/",
+                "vt": "str",
+                "case": false
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 4,
+        "x": 510,
+        "y": 220,
+        "wires": [
+            [
+                "e238a12a1290d3b9"
+            ],
+            [
+                "bc2023e282f85394"
+            ],
+            [
+                "2e5f3843fd2d9f3c"
+            ],
+            [
+                "7bb8bc22a7766771"
+            ]
+        ]
+    },
+    {
+        "id": "7bb8bc22a7766771",
+        "type": "debug",
+        "z": "94e42c7611c4a86d",
+        "name": "DEBUG: Ignored",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "21de67a98f8b30d1",
+        "type": "comment",
+        "z": "94e42c7611c4a86d",
+        "name": "Log Everything",
+        "info": "",
+        "x": 500,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "d95650ae9f760144",
+        "type": "comment",
+        "z": "94e42c7611c4a86d",
+        "name": "Log Ignored Messages",
+        "info": "",
+        "x": 740,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e238a12a1290d3b9",
+        "type": "link out",
+        "z": "94e42c7611c4a86d",
+        "name": "to TiVo Switch",
+        "mode": "link",
+        "links": [
+            "5c02eb16c024d639"
+        ],
+        "x": 665,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "bc2023e282f85394",
+        "type": "link out",
+        "z": "94e42c7611c4a86d",
+        "name": "to Back Office Lighting Switch",
+        "mode": "link",
+        "links": [
+            "770984f6bbe9cf0d"
+        ],
+        "x": 665,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "2e5f3843fd2d9f3c",
+        "type": "link out",
+        "z": "94e42c7611c4a86d",
+        "name": "to HDMI Switch",
+        "mode": "link",
+        "links": [
+            "27718413ea15b458"
+        ],
+        "x": 665,
+        "y": 280,
+        "wires": []
+    }
+]

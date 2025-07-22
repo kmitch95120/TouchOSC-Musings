@@ -1,0 +1,409 @@
+[
+    {
+        "id": "946d518627e9b1b4",
+        "type": "switch",
+        "z": "32da95830fbdf18a",
+        "name": "NumPad",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "clear",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "enter",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 13,
+        "x": 380,
+        "y": 1360,
+        "wires": [
+            [
+                "a1caa14c6fc86f7e"
+            ],
+            [
+                "0472295f5c5d409c"
+            ],
+            [
+                "a37d3d45b7e0fbd6"
+            ],
+            [
+                "6a1273332b99ed97"
+            ],
+            [
+                "4a7bf4de4f3362f3"
+            ],
+            [
+                "03d2872b0232945d"
+            ],
+            [
+                "f20e68fe24bc2e90"
+            ],
+            [
+                "55fceededb286c47"
+            ],
+            [
+                "e50e9615a3d479ba"
+            ],
+            [
+                "a7087d1ceb40fe9b"
+            ],
+            [
+                "cce2fed745ec2f61"
+            ],
+            [
+                "43b5892ab689eb85"
+            ],
+            [
+                "f3e70499a1cc4673"
+            ]
+        ]
+    },
+    {
+        "id": "725b2ae8f363b040",
+        "type": "link in",
+        "z": "32da95830fbdf18a",
+        "name": "NumPad Switch",
+        "links": [
+            "865ed7aeb0defcec"
+        ],
+        "x": 255,
+        "y": 1360,
+        "wires": [
+            [
+                "946d518627e9b1b4"
+            ]
+        ]
+    },
+    {
+        "id": "a1caa14c6fc86f7e",
+        "type": "H command",
+        "z": "32da95830fbdf18a",
+        "name": "1",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%221%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 670,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0472295f5c5d409c",
+        "type": "H command",
+        "z": "32da95830fbdf18a",
+        "name": "2",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%222%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 670,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a37d3d45b7e0fbd6",
+        "type": "H command",
+        "z": "32da95830fbdf18a",
+        "name": "3",
+        "server": "be591102caef2984",
+        "activity": null,
+        "label": "",
+        "command": "%7B%22command%22::%223%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 670,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6a1273332b99ed97",
+        "type": "H command",
+        "z": "32da95830fbdf18a",
+        "name": "4",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%224%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 670,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a7bf4de4f3362f3",
+        "type": "H command",
+        "z": "32da95830fbdf18a",
+        "name": "5",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%225%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 670,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "03d2872b0232945d",
+        "type": "H command",
+        "z": "32da95830fbdf18a",
+        "name": "6",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%226%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 670,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f20e68fe24bc2e90",
+        "type": "H command",
+        "z": "32da95830fbdf18a",
+        "name": "7",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%227%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 670,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "55fceededb286c47",
+        "type": "H command",
+        "z": "32da95830fbdf18a",
+        "name": "8",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%228%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 670,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e50e9615a3d479ba",
+        "type": "H command",
+        "z": "32da95830fbdf18a",
+        "name": "9",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%229%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 670,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a7087d1ceb40fe9b",
+        "type": "H command",
+        "z": "32da95830fbdf18a",
+        "name": "0",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%220%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 670,
+        "y": 1500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cce2fed745ec2f61",
+        "type": "H command",
+        "z": "32da95830fbdf18a",
+        "name": "clear",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22Clear%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 670,
+        "y": 1540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "43b5892ab689eb85",
+        "type": "H command",
+        "z": "32da95830fbdf18a",
+        "name": "enter",
+        "server": "be591102caef2984",
+        "activity": "65547026",
+        "harmony_type": "dev",
+        "label": "TiVo Mini",
+        "command": "%7B%22command%22::%22NumberEnter%22,%22type%22::%22IRCommand%22,%22deviceId%22::%2265547026%22%7D",
+        "repeat": "1",
+        "presstimestamp": 0,
+        "releasetimestamp": 50,
+        "delay": 0,
+        "x": 670,
+        "y": 1580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3e70499a1cc4673",
+        "type": "debug",
+        "z": "32da95830fbdf18a",
+        "name": "TiVo NumPad Ignored",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "7b04096b2dd40f3f",
+        "type": "comment",
+        "z": "32da95830fbdf18a",
+        "name": "Log Ignored Keys",
+        "info": "",
+        "x": 700,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "be591102caef2984",
+        "type": "harmony-server",
+        "name": "Back Office",
+        "ip": "172.29.1.69"
+    }
+]

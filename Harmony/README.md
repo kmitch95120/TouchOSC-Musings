@@ -12,7 +12,7 @@ The template is meant to be a simple layout that is easy to use, particularly in
 
 Note that the entire remote is a group. This is because it is a sub-project for a much larger 4K wall-mounted control panel. I also make heavy use of element grouping to keep things aligned and easier to move around without having to be too concerned with messing up alignment.
 
-Each button is a group made up of three objects; a background, a button, and a label. Each button has a single OSC message that is sent when the button is pressed. There is very little scripting in this template with the only scripts being on the buttons for visual confirmation of a press. If the device supports it, this would be a good place to put a call to the vibrate function for a more tactile confirmation.
+Each button is a group made up of three objects; a background, a button, and a label. Each button has a single OSC message that is sent when the button is pressed. There is a bit of scripting on the buttons for visual confirmation of a press. If the device supports it, this would be a good place to put a call to the vibrate function for a more tactile confirmation. There is also a bit of scripting on the "#" button that makes the "popup" number pad visible.
 
 The format of the custom OSC messages is as follows:
 
@@ -26,12 +26,30 @@ For this template the address is:
 /hs4b/backoffice/tivo/<command>
 ```
 
-## The Node-RED Message Handler Flow ([ir_remote_osc_handler.json](ir_remote_osc_handler.json))
+For the number pad keys, the OSC message is:
 
-![image](flow.png)
+```lua
+/hs4b/backoffice/tivo/numpad
+```
 
-The message handler is straight-forward. A UDP listener node listens for TouchOSC OSC messages on port 8000. Of course, this port can be changed simply by editing the node.
+With the argument of the message containing the actual key value as a string. As you can see in the Node-RED flows, the 'numpad' message along with its argument is passed to a secondary switch handler, since the number pad is only occasionally used.
 
-The UDP mesage is sent to an [OSC decode node](https://flows.nodered.org/node/node-red-contrib-osc) where it is decoded into a Node-RED message containing topic and payload. The message is then passed to a switch node that acts as a filter. A regex match of the start of the OSC address is done and the message is passed along. Messages not starting with the proper address are simply discarded, after being logged, of course.
+## The Node-RED Message Handler Flows
+
+ The TouchOSC Receiver is straight-forward. A UDP listener node listens for TouchOSC OSC messages on port 8000. Of course, this port can be changed simply by editing the node. The UDP message is sent to an [OSC decode node](https://flows.nodered.org/node/node-red-contrib-osc) where it is decoded into a Node-RED message containing topic and payload. The message is then passed to a switch node that acts as a router, based on the start of the address of the message. A regex match of the start of the OSC address is done and the message is passed along. Messages not starting with the proper address are simply discarded, after being logged, of course. As mentioned above, this will be part of a larger TouchOSC project.
+
+([TouchOSC_Receiver.json](TouchOSC_Receiver.json))
+
+![image](TouchOSC_Receiver.png)
 
 A message with a validated starting address is passed to another switch node that looks for a regex match at the end of the OSC address, which is the actual command.  Each of those matches directs the message to the corresponding Harmony Command node, which triggers a Hub command request. Any command not matched by the switch node is logged and discarded.
+
+([TiVo_Switch.json](TiVo_Switch.json))
+
+![image](TiVo_Switch.png)
+
+In the case of the 'numpad' command, the message is passed to a secondary switch that looks at the message argument and then triggers the corresponding Harmony Command node. Again, logging and discarding invalid key arguments.
+
+([TiVo_NumPad.json](TiVo_NumPad.json))
+
+![image](TiVo_NumPad.png)

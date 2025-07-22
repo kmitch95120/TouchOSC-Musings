@@ -1,16 +1,8 @@
 [
     {
-        "id": "94e42c7611c4a86d",
-        "type": "tab",
-        "label": "IR Remote - OSC Handler",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "ab20d5c6e10b6da2",
         "type": "switch",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "TiVo",
         "property": "topic",
         "propertyType": "msg",
@@ -148,14 +140,20 @@
                 "case": false
             },
             {
+                "t": "regex",
+                "v": "numpad$",
+                "vt": "str",
+                "case": false
+            },
+            {
                 "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 23,
-        "x": 790,
-        "y": 460,
+        "outputs": 24,
+        "x": 350,
+        "y": 400,
         "wires": [
             [
                 "4e363401be83baf9"
@@ -224,6 +222,9 @@
                 "8aad986241de5839"
             ],
             [
+                "865ed7aeb0defcec"
+            ],
+            [
                 "0bfd10c7355b6df9"
             ]
         ]
@@ -231,7 +232,7 @@
     {
         "id": "0bfd10c7355b6df9",
         "type": "debug",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "TiVo Ignored",
         "active": true,
         "tosidebar": true,
@@ -241,14 +242,24 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1210,
-        "y": 1000,
+        "x": 770,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "579d5ede45501f0c",
+        "type": "comment",
+        "z": "32da95830fbdf18a",
+        "name": "Log Ignored Commands",
+        "info": "",
+        "x": 770,
+        "y": 1020,
         "wires": []
     },
     {
         "id": "4e363401be83baf9",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Left",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -259,8 +270,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1190,
-        "y": 120,
+        "x": 750,
+        "y": 60,
         "wires": [
             []
         ]
@@ -268,7 +279,7 @@
     {
         "id": "b829a03e5883a0f4",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Right",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -279,8 +290,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1190,
-        "y": 160,
+        "x": 750,
+        "y": 100,
         "wires": [
             []
         ]
@@ -288,7 +299,7 @@
     {
         "id": "e9ee404b4664d2c8",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Up",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -299,8 +310,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1190,
-        "y": 200,
+        "x": 750,
+        "y": 140,
         "wires": [
             []
         ]
@@ -308,7 +319,7 @@
     {
         "id": "04c16dce4115d614",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Down",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -319,8 +330,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1190,
-        "y": 240,
+        "x": 750,
+        "y": 180,
         "wires": [
             []
         ]
@@ -328,7 +339,7 @@
     {
         "id": "96bb4c127d87106b",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "OK",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -339,8 +350,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1190,
-        "y": 280,
+        "x": 750,
+        "y": 220,
         "wires": [
             []
         ]
@@ -348,7 +359,7 @@
     {
         "id": "8f7606d7837a9fb5",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "PWR",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -359,8 +370,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1190,
-        "y": 320,
+        "x": 750,
+        "y": 260,
         "wires": [
             []
         ]
@@ -368,7 +379,7 @@
     {
         "id": "7ba101bef3853cbc",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Exit",
         "server": "be591102caef2984",
         "activity": null,
@@ -378,8 +389,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1190,
-        "y": 360,
+        "x": 750,
+        "y": 300,
         "wires": [
             []
         ]
@@ -387,7 +398,7 @@
     {
         "id": "53b15b637aa4b2e4",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Menu",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -398,8 +409,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1190,
-        "y": 400,
+        "x": 750,
+        "y": 340,
         "wires": [
             []
         ]
@@ -407,7 +418,7 @@
     {
         "id": "500f62bee53a8caf",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Guide",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -418,8 +429,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1190,
-        "y": 440,
+        "x": 750,
+        "y": 380,
         "wires": [
             []
         ]
@@ -427,7 +438,7 @@
     {
         "id": "0fd9f93a0d9c8fdd",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Vol Up",
         "server": "be591102caef2984",
         "activity": null,
@@ -437,8 +448,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1190,
-        "y": 480,
+        "x": 750,
+        "y": 420,
         "wires": [
             []
         ]
@@ -446,7 +457,7 @@
     {
         "id": "45d34a12e21898ac",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Vol Down",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -457,8 +468,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1200,
-        "y": 520,
+        "x": 760,
+        "y": 460,
         "wires": [
             []
         ]
@@ -466,7 +477,7 @@
     {
         "id": "967e3f72b331cab0",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Chn Up",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -477,8 +488,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1200,
-        "y": 560,
+        "x": 760,
+        "y": 500,
         "wires": [
             []
         ]
@@ -486,7 +497,7 @@
     {
         "id": "8fe8e7673d98a407",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Chn Down",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -497,8 +508,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1210,
-        "y": 600,
+        "x": 770,
+        "y": 540,
         "wires": [
             []
         ]
@@ -506,7 +517,7 @@
     {
         "id": "d26a503266fb3338",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Play",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -517,8 +528,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1190,
-        "y": 640,
+        "x": 750,
+        "y": 580,
         "wires": [
             []
         ]
@@ -526,7 +537,7 @@
     {
         "id": "e56d073104f75dec",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Pause",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -537,8 +548,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1190,
-        "y": 680,
+        "x": 750,
+        "y": 620,
         "wires": [
             []
         ]
@@ -546,7 +557,7 @@
     {
         "id": "765e19abb50202a3",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Record",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -557,8 +568,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1200,
-        "y": 720,
+        "x": 760,
+        "y": 660,
         "wires": [
             []
         ]
@@ -566,7 +577,7 @@
     {
         "id": "c00152c33e916908",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Rewind",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -577,8 +588,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1200,
-        "y": 760,
+        "x": 760,
+        "y": 700,
         "wires": [
             []
         ]
@@ -586,7 +597,7 @@
     {
         "id": "849419e3a98c8eb3",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "FastForward",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -597,8 +608,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1210,
-        "y": 800,
+        "x": 770,
+        "y": 740,
         "wires": [
             []
         ]
@@ -606,7 +617,7 @@
     {
         "id": "7015a9e9ab0395e5",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "SkipForward",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -617,8 +628,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1210,
-        "y": 840,
+        "x": 770,
+        "y": 780,
         "wires": [
             []
         ]
@@ -626,7 +637,7 @@
     {
         "id": "b19b3398fe9962f9",
         "type": "H command",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "SkipBackward",
         "server": "be591102caef2984",
         "activity": "65547026",
@@ -637,8 +648,8 @@
         "presstimestamp": 0,
         "releasetimestamp": 50,
         "delay": 0,
-        "x": 1220,
-        "y": 880,
+        "x": 780,
+        "y": 820,
         "wires": [
             []
         ]
@@ -646,13 +657,13 @@
     {
         "id": "2b23b07f0957bfd1",
         "type": "H activity",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Activity TiVo",
         "server": "be591102caef2984",
         "activity": "41486591",
         "label": "Watch TiVo",
-        "x": 1210,
-        "y": 920,
+        "x": 770,
+        "y": 860,
         "wires": [
             []
         ]
@@ -660,156 +671,42 @@
     {
         "id": "8aad986241de5839",
         "type": "H activity",
-        "z": "94e42c7611c4a86d",
+        "z": "32da95830fbdf18a",
         "name": "Activity Off",
         "server": "be591102caef2984",
         "activity": "-1",
         "label": "PowerOff",
-        "x": 1210,
-        "y": 960,
+        "x": 770,
+        "y": 900,
         "wires": [
             []
         ]
     },
     {
-        "id": "93347e61268767b6",
-        "type": "udp in",
-        "z": "94e42c7611c4a86d",
-        "name": "From TouchOSC",
-        "iface": "",
-        "port": "8000",
-        "ipv": "udp4",
-        "multicast": "false",
-        "group": "",
-        "datatype": "buffer",
-        "x": 180,
-        "y": 460,
-        "wires": [
-            [
-                "e4d60c5589ce55cf"
-            ]
-        ]
-    },
-    {
-        "id": "e4d60c5589ce55cf",
-        "type": "osc",
-        "z": "94e42c7611c4a86d",
-        "name": "OSC Decode",
-        "path": "",
-        "metadata": false,
-        "x": 370,
-        "y": 460,
-        "wires": [
-            [
-                "a50a6be3c0256427",
-                "a2de90f2d406a803"
-            ]
-        ]
-    },
-    {
-        "id": "69cb3f0b011e4593",
-        "type": "comment",
-        "z": "94e42c7611c4a86d",
-        "name": "Receive Messages from TouchOSC",
-        "info": "",
-        "x": 240,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "a50a6be3c0256427",
-        "type": "debug",
-        "z": "94e42c7611c4a86d",
-        "name": "DEBUG: from TouchOSC",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 570,
+        "id": "5c02eb16c024d639",
+        "type": "link in",
+        "z": "32da95830fbdf18a",
+        "name": "TiVo Switch",
+        "links": [],
+        "x": 235,
         "y": 400,
-        "wires": []
-    },
-    {
-        "id": "a2de90f2d406a803",
-        "type": "switch",
-        "z": "94e42c7611c4a86d",
-        "name": "Filter",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "regex",
-                "v": "^/hs4b/backoffice/tivo/",
-                "vt": "str",
-                "case": false
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 550,
-        "y": 460,
         "wires": [
             [
                 "ab20d5c6e10b6da2"
-            ],
-            [
-                "7bb8bc22a7766771"
             ]
         ]
     },
     {
-        "id": "7bb8bc22a7766771",
-        "type": "debug",
-        "z": "94e42c7611c4a86d",
-        "name": "DEBUG: Ignored",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 730,
-        "y": 680,
-        "wires": []
-    },
-    {
-        "id": "21de67a98f8b30d1",
-        "type": "comment",
-        "z": "94e42c7611c4a86d",
-        "name": "Log Everything",
-        "info": "",
-        "x": 540,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "d95650ae9f760144",
-        "type": "comment",
-        "z": "94e42c7611c4a86d",
-        "name": "Log Ignored Messages",
-        "info": "",
-        "x": 740,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "579d5ede45501f0c",
-        "type": "comment",
-        "z": "94e42c7611c4a86d",
-        "name": "Log Ignored Commands",
-        "info": "",
-        "x": 1210,
-        "y": 1040,
+        "id": "865ed7aeb0defcec",
+        "type": "link out",
+        "z": "32da95830fbdf18a",
+        "name": "to NumPad Switch",
+        "mode": "link",
+        "links": [
+            "725b2ae8f363b040"
+        ],
+        "x": 715,
+        "y": 940,
         "wires": []
     },
     {
