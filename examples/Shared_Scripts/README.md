@@ -234,6 +234,12 @@ require('connections')
 require('channelHandler')
 ```
 
+The ALL OFF button script is even simpler. 
+
+```Lua
+require('allOffHandler')
+```
+
 ### Finished (Almost) Template
 
 The six fixtures or "chains" in this template are identical with the exception of the starting fixture address in the group 'tag' property and the text in the top label. All 24x faders use a single, shared script.  The "ALL OFF" buttons also use a single, shared script.
